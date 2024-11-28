@@ -1,0 +1,32 @@
+# Neovim swap files
+*.swp
+*.swo
+*.swn
+
+# Backup and temporary files
+*.bak
+*.tmp
+*.un~
+
+# Session files
+Session.vim
+*.session
+
+# Plugin manager files
+/.local/share/nvim/lazy/
+/.vim/
+/.nvim/
+
+# Log and cache files
+*.log
+*.dat
+*.json
+*/.cache/
+
+# Language server files
+*.tsserver*
+
+# Virtual environment folders
+.venv/
+env/
+venv/

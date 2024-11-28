@@ -1,38 +1,5 @@
 return {
-    -- lualine.nvim configuration
-    {
-        "nvim-lualine/lualine.nvim",
-        config = function()
-            require("lualine").setup({
-                options = {
-                    theme = "auto", -- Automatically adapts to your colorscheme
-                    section_separators = { left = "", right = "" }, -- Customize separators
-                    component_separators = { left = "", right = "" },
-                    disabled_filetypes = { "NvimTree", "toggleterm" }, -- Disable lualine for specific filetypes
-                    always_divide_middle = true, -- Keeps left and right sections separate
-                },
-                sections = {
-                    lualine_a = { "mode" }, -- Displays the current mode (e.g., INSERT, NORMAL)
-                    lualine_b = { "branch", "diff", { "diagnostics", sources = { "nvim_lsp" }, symbols = { error = "E:", warn = "W:", info = "I:", hint = "H:" } } },
-                    lualine_c = { { "filename", path = 1 } }, -- Ensure path option is correct
-                    lualine_x = { "encoding", "fileformat", "filetype" },
-                    lualine_y = { "progress" },
-                    lualine_z = { "location" }, -- Displays line and column numbers
-                },
-                inactive_sections = {
-                    lualine_a = {},
-                    lualine_b = {},
-                    lualine_c = { { "filename", path = 1 } }, -- Display filename even in inactive buffers
-                    lualine_x = { "location" },
-                    lualine_y = {},
-                    lualine_z = {},
-                },
-                tabline = {}, -- You can add custom tabs if needed
-                extensions = { "nvim-tree", "toggleterm", "quickfix" }, -- Support for additional integrations
-            })
-        end,
-    },
-    
+
     -- barbecue.nvim configuration
     {
         "utilyre/barbecue.nvim",
@@ -100,5 +67,5 @@ return {
                 },
               })
         end,
-      }
+    }
 }
